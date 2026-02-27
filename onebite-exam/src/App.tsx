@@ -1,13 +1,31 @@
+import { toast } from "sonner";
 import "./App.css";
 import { Button } from "./components/ui/button";
+import { Input } from "./components/ui/input";
+import { Toaster } from "./components/ui/sonner";
+import { Textarea } from "./components/ui/textarea";
 import { cn } from "./lib/utils";
 
 function App() {
   const isActive = true;
 
   return (
-    <div>
-      <Button>딸깍</Button>
+    <div className="p-5">
+      <Toaster />
+
+      <Textarea />
+
+      <Input placeholder="입력해주세요" />
+
+      <Button
+        onClick={() => {
+          toast("토스트 메세지", {
+            position: "top-center"
+          });
+        }}
+      >
+        딸깍
+      </Button>
       <Button variant={"destructive"}>딸깍</Button>
       <Button variant={"ghost"}>딸깍</Button>
       <Button variant={"link"}>딸깍</Button>
