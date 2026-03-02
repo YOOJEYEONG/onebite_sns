@@ -1,5 +1,16 @@
 import { toast } from "sonner";
 import "./App.css";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "./components/ui/alert-dialog";
 import { Button } from "./components/ui/button";
 import {
   Carousel,
@@ -8,6 +19,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "./components/ui/dialog";
 import { Input } from "./components/ui/input";
 import {
   Popover,
@@ -37,6 +54,7 @@ function App() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
+
       <Popover>
         <PopoverTrigger asChild>
           <Button>Popover</Button>
@@ -48,6 +66,36 @@ function App() {
           </PopoverHeader>
         </PopoverContent>
       </Popover>
+
+      <Dialog>
+        <DialogTrigger>Open</DialogTrigger>
+        <DialogContent>
+          {/* <DialogHeader> */}
+          <DialogTitle>Title</DialogTitle>
+          {/* <DialogDescription>Description</DialogDescription>
+          </DialogHeader> */}
+          <div>body</div>
+        </DialogContent>
+      </Dialog>
+
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button variant="outline">Show Dialog</Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete your
+              account from our servers.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction>Continue</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       <Toaster />
 
