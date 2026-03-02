@@ -1,6 +1,13 @@
 import { toast } from "sonner";
 import "./App.css";
 import { Button } from "./components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./components/ui/carousel";
 import { Input } from "./components/ui/input";
 import { Toaster } from "./components/ui/sonner";
 import { Textarea } from "./components/ui/textarea";
@@ -11,6 +18,18 @@ function App() {
 
   return (
     <div className="p-5">
+      <Carousel className="mx-10">
+        <CarouselContent>
+          <CarouselItem className="basis-1/3">1</CarouselItem>
+          <CarouselItem className="basis-1/3">2</CarouselItem>
+          <CarouselItem className="basis-1/3">3</CarouselItem>
+          <CarouselItem className="basis-1/3">4</CarouselItem>
+          <CarouselItem className="basis-1/3">5</CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+
       <Toaster />
 
       <Textarea />
@@ -20,7 +39,7 @@ function App() {
       <Button
         onClick={() => {
           toast("토스트 메세지", {
-            position: "top-center"
+            position: "top-center",
           });
         }}
       >
