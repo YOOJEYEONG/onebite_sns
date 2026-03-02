@@ -9,6 +9,14 @@ import {
   CarouselPrevious,
 } from "./components/ui/carousel";
 import { Input } from "./components/ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "./components/ui/popover";
 import { Toaster } from "./components/ui/sonner";
 import { Textarea } from "./components/ui/textarea";
 import { cn } from "./lib/utils";
@@ -29,6 +37,17 @@ function App() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
+      <Popover>
+        <PopoverTrigger asChild>
+          <Button>Popover</Button>
+        </PopoverTrigger>
+        <PopoverContent>
+          <PopoverHeader>
+            <PopoverTitle>Title</PopoverTitle>
+            <PopoverDescription>text</PopoverDescription>
+          </PopoverHeader>
+        </PopoverContent>
+      </Popover>
 
       <Toaster />
 
