@@ -1,3 +1,4 @@
+import { ChefHat } from "lucide-react";
 import { toast } from "sonner";
 import "./App.css";
 import {
@@ -43,6 +44,8 @@ function App() {
 
   return (
     <div className="p-5">
+      <ChefHat />
+
       <Carousel className="mx-10">
         <CarouselContent>
           <CarouselItem className="basis-1/3">1</CarouselItem>
