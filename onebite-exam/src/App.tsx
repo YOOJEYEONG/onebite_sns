@@ -8,7 +8,7 @@ function AuthLayout() {
   return (
     <div>
       <header>Auth!</header>
-      <Outlet />
+      <Outlet /> {/* 페이지 컴포넌트의 위치를 정하는것 */}
     </div>
   );
 }
